@@ -1,0 +1,324 @@
+\documentclass{article}
+
+% The automated optical recognition software used to digitize resume
+% information works best with fonts that do not have serifs. This
+% command uses a sans serif font throughout. Uncomment both lines (or at
+% least the second) to restore a Roman font (i.e., a font with serifs).
+%\usepackage{times}
+%\renewcommand{\familydefault}{\sfdefault}
+
+% This is a helpful package that puts math inside length specifications
+\usepackage{calc}
+\usepackage{comment}
+
+% Simpler bibsection for CV sections
+% (thanks to natbib for inspiration)
+\makeatletter
+\newlength{\bibhang}
+\setlength{\bibhang}{1em} %1em}
+\newlength{\bibsep}
+ {\@listi \global\bibsep\itemsep \global\advance\bibsep by\parsep}
+\newenvironment{bibsection}%
+        {\begin{enumerate}{}{%
+%        {\begin{list}{}{%
+       \setlength{\leftmargin}{\bibhang}%
+       \setlength{\itemindent}{-\leftmargin}%
+       \setlength{\itemsep}{\bibsep}%
+       \setlength{\parsep}{\z@}%
+        \setlength{\partopsep}{0pt}%
+        \setlength{\topsep}{0pt}}}
+        {\end{enumerate}\vspace{-.6\baselineskip}}
+%        {\end{list}\vspace{-.6\baselineskip}}
+\makeatother
+
+% Layout: Puts the section titles on left side of page
+\reversemarginpar
+
+%
+%         PAPER SIZE, PAGE NUMBER, AND DOCUMENT LAYOUT NOTES:
+%
+% The next \usepackage line changes the layout for CV style section
+% headings as marginal notes. It also sets up the paper size as either
+% letter or A4. By default, letter was used. If A4 paper is desired,
+% comment out the letterpaper lines and uncomment the a4paper lines.
+%
+% As you can see, the margin widths and section title widths can be
+% easily adjusted.
+%
+% ALSO: Notice that the includefoot option can be commented OUT in order
+% to put the PAGE NUMBER *IN* the bottom margin. This will make the
+% effective text area larger.
+%
+% IF YOU WISH TO REMOVE THE ``of LASTPAGE'' next to each page number,
+% see the note about the +LP and -LP lines below. Comment out the +LP
+% and uncomment the -LP.
+%
+% IF YOU WISH TO REMOVE PAGE NUMBERS, be sure that the includefoot line
+% is uncommented and ALSO uncomment the \pagestyle{empty} a few lines
+% below.
+%
+
+%% Use these lines for letter-sized paper
+\usepackage[paper=letterpaper,
+            %includefoot, % Uncomment to put page number above margin
+            marginparwidth=1.2in,     % Length of section titles
+            marginparsep=.05in,       % Space between titles and text
+            margin=.75in,               % 1 inch margins
+            includemp]{geometry}
+
+%% Use these lines for A4-sized paper
+%\usepackage[paper=a4paper,
+%            %includefoot, % Uncomment to put page number above margin
+%            marginparwidth=30.5mm,    % Length of section titles
+%            marginparsep=1.5mm,       % Space between titles and text
+%            margin=25mm,              % 25mm margins
+%            includemp]{geometry}
+
+%% More layout: Get rid of indenting throughout entire document
+\setlength{\parindent}{0in}
+
+\usepackage[shortlabels]{enumitem}
+
+%% Reference the last page in the page number
+%
+% NOTE: comment the +LP line and uncomment the -LP line to have page
+%       numbers without the ``of ##'' last page reference)
+%
+% NOTE: uncomment the \pagestyle{empty} line to get rid of all page
+%       numbers (make sure includefoot is commented out above)
+%
+\usepackage{fancyhdr,lastpage}
+\pagestyle{fancy}
+\pagestyle{empty}      % Uncomment this to get rid of page numbers
+\fancyhf{}\renewcommand{\headrulewidth}{0pt}
+\fancyfootoffset{\marginparsep+\marginparwidth}
+\newlength{\footpageshift}
+\setlength{\footpageshift}
+          {0.5\textwidth+0.5\marginparsep+0.5\marginparwidth-2in}
+\lfoot{\hspace{\footpageshift}%
+       \parbox{4in}{\, \hfill %
+                    \arabic{page} of \protect\pageref*{LastPage} % +LP
+%                    \arabic{page}                               % -LP
+                    \hfill \,}}
+
+% Finally, give us PDF bookmarks
+\usepackage{color,hyperref}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.3}
+\hypersetup{colorlinks,breaklinks,
+            linkcolor=darkblue,urlcolor=darkblue,
+            anchorcolor=darkblue,citecolor=darkblue}
+
+%%%%%%%%%%%%%%%%%%%%%%%% End Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% The title (name) with a horizontal rule under it
+% (optional argument typesets an object right-justified across from name
+%  as well)
+%
+% Usage: \makeheading{name}
+%        OR
+%        \makeheading[right_object]{name}
+%
+% Place at top of document. It should be the first thing.
+% If ``right_object'' is provided in the square-braced optional
+% argument, it will be right justified on the same line as ``name'' at
+% the top of the CV. For example:
+%
+%       \makeheading[\emph{Curriculum vitae}]{Your Name}
+%
+% will put an emphasized ``Curriculum vitae'' at the top of the document
+% as a title. Likewise, a picture could be included:
+%
+%   \makeheading[\includegraphics[height=1.5in]{my_picutre}]{Your Name}
+%
+% the picture will be flush right across from the name.
+\newcommand{\makeheading}[2][]%
+        {\hspace*{-\marginparsep minus \marginparwidth}%
+         \begin{minipage}[t]{\textwidth+\marginparwidth+\marginparsep}%
+             {\large \bfseries #2 \hfill #1}\\[-0.15\baselineskip]%
+                 \rule{\columnwidth}{1pt}%
+         \end{minipage}}
+
+% The section headings
+%
+% Usage: \section{section name}
+\renewcommand{\section}[1]{\pagebreak[3]%
+    \hyphenpenalty=10000%
+    \vspace{1.3\baselineskip}%
+    \phantomsection\addcontentsline{toc}{section}{#1}%
+    \noindent\llap{\scshape\smash{\parbox[t]{\marginparwidth}{\raggedright #1}}}%
+    \vspace{-\baselineskip}\par}
+
+% An itemize-style list with lots of space between items
+\newenvironment{outerlist}[1][\enskip\textbullet]%
+        {\begin{itemize}[#1,leftmargin=*]}{\end{itemize}%
+         \vspace{-.6\baselineskip}}
+
+% An environment IDENTICAL to outerlist that has better pre-list spacing
+% when used as the first thing in a \section
+\newenvironment{lonelist}[1][\enskip\textbullet]%
+        {\begin{list}{#1}{%
+        \setlength{\partopsep}{0pt}%
+        \setlength{\topsep}{0pt}}}
+        {\end{list}\vspace{-.6\baselineskip}}
+
+% An itemize-style list with little space between items
+\newenvironment{innerlist}[1][\enskip\textbullet]%
+        {\begin{itemize}[#1,leftmargin=*,parsep=0pt,itemsep=0pt,topsep=0pt,partopsep=0pt]}
+        {\end{itemize}}
+
+% An environment IDENTICAL to innerlist that has better pre-list spacing
+% when used as the first thing in a \section
+\newenvironment{loneinnerlist}[1][\enskip\textbullet]%
+        {\begin{itemize}[#1,leftmargin=*,parsep=0pt,itemsep=0pt,topsep=0pt,partopsep=0pt]}
+        {\end{itemize}\vspace{-.6\baselineskip}}
+
+% To add some paragraph space between lines.
+% This also tells LaTeX to preferably break a page on one of these gaps
+% if there is a needed pagebreak nearby.
+\newcommand{\blankline}{\quad\pagebreak[3]}
+\newcommand{\halfblankline}{\quad\vspace{-0.5\baselineskip}\pagebreak[3]}
+
+% Uses hyperref to link DOI
+\newcommand\doilink[1]{\href{http://dx.doi.org/#1}{#1}}
+\newcommand\doi[1]{doi:\doilink{#1}}
+
+% For \url{SOME_URL}, links SOME_URL to the url SOME_URL
+\providecommand*\url[1]{\href{#1}{#1}}
+% Same as above, but pretty-prints SOME_URL in teletype fixed-width font
+\renewcommand*\url[1]{\href{#1}{\texttt{#1}}}
+
+% For \email{ADDRESS}, links ADDRESS to the url mailto:ADDRESS
+\providecommand*\email[1]{\href{mailto:#1}{#1}}
+% Same as above, but pretty-prints ADDRESS in teletype fixed-width font
+%\renewcommand*\email[1]{\href{mailto:#1}{\texttt{#1}}}
+
+%\providecommand\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+%    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+%\providecommand\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+%    \TeX}}
+\providecommand\BibTeX{{B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    \TeX}}
+\providecommand\Matlab{\textsc{Matlab}}
+
+%%%%%%%%%%%%%%%%%%%%%%%% End Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Begin CV Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\makeheading{Nehemias Ulloa}
+
+\section{Contact Information}
+
+% NOTE: Mind where the & separators and \\ breaks are in the following
+%       table.
+%
+% ALSO: \rcollength is the width of the right column of the table
+%       (adjust it to your liking; default is 1.85in).
+%
+\newlength{\rcollength}\setlength{\rcollength}{1.4in}%
+%
+\begin{tabular}{@{}p{2in}p{4in}}
+2438 Osborn Dr.  & {\it Phone:}  661.747.5561 \\            
+Iowa State University  &  {\it E-mail:} nulloa1@iastate.edu\\   
+Ames, Iowa USA 50011 & {\it Webpage:} \href{https://nulloa.github.io/}{nulloa.github.io}         
+\end{tabular}
+%\section{Objective}
+
+%Insert text here if you want to
+%\begin{innerlist}
+%\item More information and auxiliary documents can be found at\\\url{http://www.tedpavlic.com/facjobsearch/}
+%\end{innerlist}
+
+\section{Education}
+
+{\textbf{PhD in Statistics}}\\
+Iowa State University, \textit{Expected:} June 2019 
+
+\textit{Thesis:} Bayesian Hierarchical Modeling and Analysis for Disease Outbreaks\\
+
+{\textbf{BS in Mathematics}} \\
+California State University, Bakersfield, 2013
+
+
+
+%%%%% Work Experience %%%%%
+\section{Work Experience}
+
+\textbf{Iowa State University} \hfill {\textbf{Aug 2013 - Present}}
+\begin{innerlist}
+  \item TA: Run/assist with labs, office hours, and grading for STAT 101 (Principles of Statistics), STAT 401 (Statistical Methods for Research Workers), STAT 544 (Graduate-level Bayesian Statistics)
+  \item Instructor: STAT 101 and STAT 305 (Engineering Statistics)\\
+\end{innerlist}
+
+
+\textbf{California State University, Bakersfield} \hfill {\textbf{Jan 2011 - July 2013}}
+\begin{innerlist}
+  \item TA: Helped run remedial math courses MATH 75 (Developmental Mathematics I) \& MATH 85 (Developmental Mathematics II)
+  \item Tutor: Worked at the Math Deptartment Tutoring Center where helped students from algebra through the calculus series
+  \item Instructor: Run MATH 75 \& MATH 85
+\end{innerlist}
+
+%%%%% Research Experience %%%%%
+\section{Research Experience}
+\textbf{CREST(NSF)}, California State University, Bakersfield \hfill {\textbf{June 2012 - June 2013}}
+\begin{innerlist}
+  \item RA: investigated which method of fitting a penalized broken cubic spline performs best by comparing AIC, AICcorr, BIC, CV, and GCV criteria’s to the RSE\\
+\end{innerlist}
+%
+\textbf{REU Site: Interdisciplinary Program in High Performance Computing}, University of Maryland, Baltimore County \hfill {\textbf{Summer 2012}}
+\begin{innerlist}
+  \item Took Math 447: Introduction to Parallel Computing
+  \begin{innerlist}
+    \item Learned parallel computing code using C with MPI, R with Snow, and Matlab
+  \end{innerlist}
+  \item My team collaborated with the Department of Natural Resources of Maryland on a project for 4 weeks where we identified trouble areas of the Chesapeake Bay using different statistical methods and ranking systems
+\end{innerlist}
+
+
+%%%%% Publications %%%%%
+\section{Publications}
+
+Eduardo L. Montoya, Nehemias Ulloa, and Victoria Miller. (2014) A Simulation Study Comparing Knot Selection Methods With Equally Spaced Knots in a Penalized Regression Spline. \textit{International Journal of Statistics and Probability}, v.3, n.3, p. p96. (\href{http://www.ccsenet.org/journal/index.php/ijsp/article/view/36992}{URL}) \\
+
+Rosemary K. Le, Christopher V. Rackauckas, Anne S. Ross, and Nehemias Ulloa. (2013) Assessment of Statistical Methods for Water Quality Monitoring in Maryland’s Tidal Waterways. \textit{SIAM Undergraduate Research Online (SIURO)}, vol. 6. (\href{https://www.siam.org/students/siuro/vol6/S01207.pdf}{URL}) \\
+
+
+%%%%% Awards %%%%%
+\section{Awards}
+\textbf{Alliance for Graduate Education and the Professoriate (AGEP) Fellowship}, Iowa State University \hfill {\textbf{Aug 2013 - June 2018}}
+\begin{innerlist}
+  \item Joint-fellowship between Iowa State University, the University of Iowa, and the University of Northern Iowa dedicated to increasing the number of underrepresented minorities obtaining graduate degrees in science, technology, engineering and mathematics.\\
+\end{innerlist}
+
+
+
+%%%%% Computer Skills %%%%%
+\section{Computer \\Skills}
+\textbf{Mathematical Computing}:  R, SAS, C++, SPSS, MPLUS, JMP\\
+\textbf{Other}: \LaTeX, Git
+
+
+\end{document}
+
+%\section{References}
+
+%Bradley P.\ Carlin
+%\begin{innerlist}
+%\item[] Mayo Professor in Public Health, Division Head \hfill {Phone: 612-624-6646}\\
+%Division of Biostatistics \hfill{E-mail: carli002@umn.edu}\\
+%University of Minnesota
+%\end{innerlist}
+
+%\halfblankline
+
+%Sudipto Banerjee
+%\begin{innerlist}
+%\item[] Professor \hfill {Phone: 612-624-0624}\\
+%Division of Biostatistics \hfill{E-mail: baner009@umn.edu}\\
+%University of Minnesota
+%\end{innerlist}
+
+
