@@ -11,13 +11,13 @@
 
 Dear Hiring Coordinator,\\
 
-You will find my Resume submitted for the application to NBCUnvisersal's Data Scientist, Data Analytics \& Insights Intern position. \\
+You will find my Resume submitted for the application to Taboola's Data Science Intern position. \\
 
 My experience has given me the knowledge to excel at this position; it has taught me to be a diligent worker, to collaborate with a team, and to present statistical ideas in easily understood manner. Through my REU I was able to put to use these three skills. I enjoyed communicating the big ideas of our team's statistical analysis to our DNR contact. Being a lab teaching assistant for Stat 401, a general statistics course for non-statistics graduate students, has allowed me to work on my communication of statistical concepts to other experts.\\
 
-Given the courses I have taken, I believe have the technical skills necessary to succeed in this position. I have covered many different topics in my courses: linear models, Bayesian statistics, machine learning, and general statistical methods. I have experience using modern visualization methods, like shiny apps, during a science night at Meeker elementary in Ames, IA. I feel that this position would give me the opportunity to apply my knowledge in a practical way while sharpening these skills. My research has also given me experience with state space models and Bayesian hierarchical modeling techniques.\\
+Given the courses I have taken, I believe have the technical skills necessary to succeed in this position. I have covered many different topics in my courses: linear models, Bayesian statistics, machine learning, and general statistical methods. I have experience using modern visualization methods, like shiny apps, during a science night at a local elementary school. I am very well versed in the \verb|R| language. Research has given me experience with state space models and Bayesian hierarchical modeling techniques. I feel that this position would give me the opportunity to apply my knowledge in a practical way while sharpening my skills.\\
 
-I was born and raised in Bakersfield, CA. After completing my degree, I plan on moving back to the west coast. This internship would allow me to get a feel for the industry in one of my ideal locations.  \\
+I was born and raised in Bakersfield, CA. After completing my degree, I plan on moving back to the west coast. This internship would allow me to get a feel for the industry in one of my ideal locations: Los Angeles.  \\
 
 Thank you considering my application, and I look forward to your response. \\
 
