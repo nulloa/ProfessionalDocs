@@ -9,25 +9,8 @@
 
 \begin{document}
 
-Dear Mr. Adelsberg,\\
+Dear Hiring Committee, \\
 
-<<<<<<< HEAD
-You will find my Resume submitted for the application to After Inc.'s R Shiny Developer Intern position. \\
-
-I feel my experiences will allow me to excel at this internship; they have taught me to be a diligent worker, to collaborate with a team, and to present statistical ideas in easily understood manner. During my REU, I enjoyed communicating the big ideas of our team's statistical analysis to our Maryland Department of Natural Resources contact. More recently, being a teaching assistant for Stat 101(Introductory Statistics) and 401(Statistics for Graduate Students) has taught me to communicate statistical concepts to experts in other fields as well as being able to explain the big takeaways to a non-technical crowd.\\
-
-% Recently, being a teaching assistant for Stat 101 and 401, a general statistics course for non-statistics graduate students, has allowed me to work on my communication of statistical concepts to other experts.\\
-
-% I have covered many different topics in my courses: linear models, Bayesian statistics, machine learning, and general statistical methods. I have experience using modern visualization methods, like shiny apps, during a science night at a local elementary school. I am very well versed in the \verb|R| language. Through my research, I have experience with state space models and Bayesian hierarchical modeling techniques. I feel that this position would give me the opportunity to apply my knowledge in a practical way while sharpening my skills.\\
-
-I have covered many different topics in my courses: linear models, Bayesian statistics, machine learning, and general statistical methods. Through my research, I have experience with state space models and Bayesian hierarchical modeling techniques. I feel that this position would give me the opportunity to apply my knowledge in a practical way while sharpening these skills.\\
-
-I am well versed in the \verb|R| language via course work and research; I have created packages for the code used in my research which is located on my \verb|github|. I have also worked with \verb|R Shiny| by creating a data collection and linear regression shiny app used by the department for science nights at the local elementary schools. The \verb|Shiny| app I created allows students to input their shoe size, height, grade, and sex, and creates a linear regression on their height based on their shoe size with facets for sex and different colors for each grade. This allowed elementary kids hands on experience with collecting and exploring their own data in real time.\\
-
-%I was born and raised in Bakersfield, CA. After completing my degree, I plan on moving back to the west coast. This internship would allow me to get a feel for the industry in one of my ideal locations.  \\
-
-Thank you considering my application, and I look forward to your response. \\
-=======
 You will find my Resume submitted for the application to Kern Community College District's Institutional Research Analyst (COF) position. \\
 
 I believe my experience has given me the knowledge and experience to excel at this position. I am in the final year of my Ph.D. program in Statistics at Iowa State University. I have taken many core courses, including 4 courses in statistical methods and 5 in statistical theory. My elective courses covered Bayesian statistics, environmental statistics, spatial statistics, and machine learning. My course background gives me a large breadth of knowledge of the principles and methods of statistics and data science. I have experience in modern visualization methods as a Shiny Developer. My internship, TA work and elective projects have given me the opportunity to work with experts in different fields which, in turn, has given me the opportunity to perform extensive statistical and technical planning, design, research and evaluation duties. \\
@@ -35,8 +18,6 @@ I believe my experience has given me the knowledge and experience to excel at th
 My research uses Bayesian hierarchical models to study and forecast the influenza season using sparse supervised-learning techniques, hierarchical non-linear models, and by incorporating multiple data sources in a Bayesian framework. I have implemented my analysis in \verb|R| and created \verb|R| packages of my code stored on Github for version control and distribution incorporating a variety of software packages used for data analysis, data management, graphics and word processing. I have collaborated with a graduate student in Natural Resource Ecology and Management creating a Bayesian classification model for fish eggs. This experience provided me with the opportunity to provide consulting services for a scientist. In an effort to asses species invasion, we modeled fish egg characteristics to try and classify the fish type before they hatched. This process taught me to appropriately communicate the statistical model with researchers outside of statistics and narrow a research question down to a solvable problem. \\
 
 Finally, I was born and raised in Bakersfield, CA, and I completed my undergraduate degree at CSUB. After completing my Ph.D., I plan on moving back to the west coast. This job would allow me to contribute to my home community in a positive manner. Thank you considering my application, and I look forward to your response. \\
->>>>>>> 388c6fa20770b09ceb80b2f30b69fa98cc139021
-
 
 Sincerely,
 
