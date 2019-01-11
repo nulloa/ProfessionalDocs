@@ -9,15 +9,21 @@
 
 \begin{document}
 
-Dear Hiring Coordinator,\\
+Dear Mr. Adelsberg,\\
 
-You will find my Resume submitted for the application to Walt Disney Studios's Production Data \& Analytics Intern position. \\
+You will find my Resume submitted for the application to After Inc.'s R Shiny Developer Intern position. \\
 
-My experience has given me the knowledge to excel at this position; it has taught me to be a diligent worker, to collaborate with a team, and to present statistical ideas in easily understood manner. Through my REU, I was able to put to use these three skills. I enjoyed communicating the big ideas of our team's statistical analysis to our DNR contact. Being a lab teaching assistant for Stat 401, a general statistics course for non-statistics graduate students, has allowed me to work on my communication of statistical concepts to other experts.\\
+I feel my experiences will allow me to excel at this internship; they have taught me to be a diligent worker, to collaborate with a team, and to present statistical ideas in easily understood manner. During my REU, I enjoyed communicating the big ideas of our team's statistical analysis to our Maryland Department of Natural Resources contact. More recently, being a teaching assistant for Stat 101(Introductory Statistics) and 401(Statistics for Graduate Students) has taught me to communicate statistical concepts to experts in other fields as well as being able to explain the big takeaways to a non-technical crowd.\\
 
-Given the courses I have taken, I believe have the technical skills necessary to succeed in this position. I have covered many different topics in my courses: linear models, Bayesian statistics, machine learning, and general statistical methods. I have experience using modern visualization methods, like shiny apps, during a science night at a local elementary school. I am very well versed in the \verb|R| language. Research has given me experience with state space models and Bayesian hierarchical modeling techniques. I feel that this position would give me the opportunity to apply my knowledge in a practical way while sharpening my skills.\\
+% Recently, being a teaching assistant for Stat 101 and 401, a general statistics course for non-statistics graduate students, has allowed me to work on my communication of statistical concepts to other experts.\\
 
-I was born and raised in Bakersfield, CA. After completing my degree, I plan on moving back to the west coast. This internship would allow me to get a feel for the industry in one of my ideal locations: Los Angeles.  \\
+% I have covered many different topics in my courses: linear models, Bayesian statistics, machine learning, and general statistical methods. I have experience using modern visualization methods, like shiny apps, during a science night at a local elementary school. I am very well versed in the \verb|R| language. Through my research, I have experience with state space models and Bayesian hierarchical modeling techniques. I feel that this position would give me the opportunity to apply my knowledge in a practical way while sharpening my skills.\\
+
+I have covered many different topics in my courses: linear models, Bayesian statistics, machine learning, and general statistical methods. Through my research, I have experience with state space models and Bayesian hierarchical modeling techniques. I feel that this position would give me the opportunity to apply my knowledge in a practical way while sharpening these skills.\\
+
+I am well versed in the \verb|R| language via course work and research; I have created packages for the code used in my research which is located on my \verb|github|. I have also worked with \verb|R Shiny| by creating a data collection and linear regression shiny app used by the department for science nights at the local elementary schools. The \verb|Shiny| app I created allows students to input their shoe size, height, grade, and sex, and creates a linear regression on their height based on their shoe size with facets for sex and different colors for each grade. This allowed elementary kids hands on experience with collecting and exploring their own data in real time.\\
+
+%I was born and raised in Bakersfield, CA. After completing my degree, I plan on moving back to the west coast. This internship would allow me to get a feel for the industry in one of my ideal locations.  \\
 
 Thank you considering my application, and I look forward to your response. \\
 
